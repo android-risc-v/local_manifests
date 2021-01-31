@@ -1,11 +1,10 @@
 # Download Android source with local_manifests
  Refer to http://source.android.com/source/downloading.html
 
- $ repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r41
- $ git clone https://github.com/android-rpi/local_manifests .repo/local_manifests -b arpi-10
+ $ repo init -u https://android.googlesource.com/platform/manifest -b android10-release
+ $ git clone https://github.com/android-rv/local_manifests .repo/local_manifests -b arv-10
  $ repo sync
 
-# Build for Raspberry Pi 4
- https://github.com/android-rpi/device_arpi_rpi4
+# Build for RISC-V
 
 Use -j[n] option on sync & build steps, if build host has a good number of CPU cores.
