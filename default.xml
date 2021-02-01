@@ -103,4 +103,13 @@
   <remove-project name="platform/test/vts-testcase/fuzz"/>
   <project path="test/vts-testcase/fuzz" name="test_vts-testcase_fuzz" revision="arv-10" remote="arv"/>
 
+
+  <!-- touched by android-rv -->
+
+  <remove-project name="platform/frameworks/compile/libbcc"/>
+  <remove-project name="platform/frameworks/compile/mclinker"/>
+  <remove-project name="platform/frameworks/compile/slang"/>
+  <remove-project name="platform/frameworks/ml"/>
+  <remove-project name="platform/frameworks/rs"/>
+
 </manifest>
