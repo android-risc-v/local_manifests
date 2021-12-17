@@ -2,7 +2,7 @@
  Refer to http://source.android.com/source/downloading.html
 
   $ repo init -u https://android.googlesource.com/platform/manifest -b android10-release
-  $ git clone https://github.com/android-rv/local_manifests .repo/local_manifests -b arv-10
+  $ git clone https://github.com/android-risc-v/local_manifests .repo/local_manifests -b arv-10
   $ repo sync
 
 # Patch Android source
@@ -12,11 +12,14 @@
  Continue build referring to http://source.android.com/source/building.html
 
   $ source build/envsetup.sh
-  $ lunch aosp_riscv64-eng
+  $ lunch ice910dk-userdebug
   $ export LD_LIBRARY_PATH="${ANDROID_BUILD_TOP}/out/soong/host/linux-x86/lib64:${ANDROID_BUILD_TOP}/prebuilts/build-tools/linux-x86/lib64:${ANDROID_BUILD_TOP}/prebuilts/clang/host/linux-x86/clang-dev/lib64:${ANDROID_BUILD_TOP}/out/soong/host/linux-x86/lib:/${ANDROID_BUILD_TOP}/out/host/linux-x86/lib64:${ANDROID_BUILD_TOP}/prebuilts/clang/host/linux-x86/clang-dev/lib64/"
   $ m
+  $ cp prebuilts/vndk/v28/riscv64/arch-riscv64-riscv64/shared/vndk-sp/libcompiler_rt.so out/target/product/ice910dk/system/lib64/
+  $ rm -rf out/target/product/ice910dk/obj/PACKAGING
+  $ m
 
-# Run Emulator
-  $ emulator -selinux permissive -qemu -smp 2 -m 3800M -bios prebuilts/qemu-kernel/riscv64/ranchu/fw_jump.bin
+# Flashing
+  https://github.com/android-risc-v/aosp-riscv#setup-rvb-ice-environment
 
 Use -j[n] option on sync & build steps, if build host has a good number of CPU cores.

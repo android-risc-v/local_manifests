@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="arv" fetch="https://github.com/android-rv"/>
+  <remote name="arv" fetch="https://github.com/android-risc-v"/>
 
   <project path="aosp-riscv" name="aosp-riscv" revision="arv-10" remote="arv"/>
 
@@ -104,7 +104,12 @@
   <project path="test/vts-testcase/fuzz" name="test_vts-testcase_fuzz" revision="arv-10" remote="arv"/>
 
 
-  <!-- touched by android-rv -->
+  <!-- touched by android-risc-v -->
+
+  <project path="vendor/arpi/RpLauncher" name="RpLauncher" revision="arpi-10" remote="arv"/>
+
+  <remove-project name="device/google/atv"/>
+  <project path="device/google/atv" name="device_google_atv" revision="arv-10" remote="arv"/>
 
   <remove-project name="platform/frameworks/compile/libbcc"/>
   <remove-project name="platform/frameworks/compile/mclinker"/>
