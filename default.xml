@@ -1,141 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote name="arv" fetch="https://github.com/android-risc-v"/>
+  <remote name="riscv-android" fetch="https://github.com/riscv-android-src"/>
 
   <remove-project name="platform/build/bazel"/>
-  <project path="build/bazel" name="build_bazel" revision="riscv64-android-12.0.0_dev" remote="arv">
+  <project path="build/bazel" name="platform-build-bazel" revision="riscv64-android-12.0.0_dev" remote="riscv-android">
     <linkfile src="bazel.WORKSPACE" dest="WORKSPACE" />
     <linkfile src="bazel.sh" dest="tools/bazel" />
     <linkfile src="bazel.BUILD" dest="BUILD" />
   </project>
   <remove-project name="platform/build/soong"/>
-  <project path="build/soong" name="build_soong" revision="riscv64-android-12.0.0_dev" remote="arv">
+  <project path="build/soong" name="platform-build-soong" revision="riscv64-android-12.0.0_dev" remote="riscv-android">
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
 
   <remove-project name="platform/bionic"/>
-  <project path="bionic" name="bionic" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="bionic" name="platform-bionic" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/development"/>
-  <project path="development" name="development" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="development" name="platform-development" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
 
   <remove-project name="device/generic/goldfish"/>
-  <project path="device/generic/goldfish" name="device_generic_goldfish" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="device/generic/goldfish" name="device-generic-goldfish" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="device/generic/goldfish-opengl"/>
-  <project path="device/generic/goldfish-opengl" name="device_generic_goldfish-opengl" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="device/generic/goldfish-opengl" name="device-generic-goldfish-opengl" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
 
   <remove-project name="platform/external/aac"/>
-  <project path="external/aac" name="external_aac" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/aac" name="platform-external-aac" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/avb"/>
-  <project path="external/avb" name="external_avb" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/avb" name="platform-external-avb" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/boringssl"/>
-  <project path="external/boringssl" name="external_boringssl" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/boringssl" name="platform-external-boringssl" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/crosvm"/>
-  <project path="external/crosvm" name="external_crosvm" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/crosvm" name="platform-external-crosvm" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/deqp"/>
-  <project path="external/deqp" name="external_deqp" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/deqp" name="platform-external-deqp" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/grpc-grpc"/>
-  <project path="external/grpc-grpc" name="external_grpc-grpc" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/grpc-grpc" name="platform-external-grpc-grpc" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/libavc"/>
-  <project path="external/libavc" name="external_libavc" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/libavc" name="platform-external-libavc" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/libchrome"/>
-  <project path="external/libchrome" name="external_libchrome" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/libchrome" name="platform-external-libchrome" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/libhevc"/>
-  <project path="external/libhevc" name="external_libhevc" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/libhevc" name="platform-external-libhevc" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/libjpeg-turbo"/>
-  <project path="external/libjpeg-turbo" name="external_libjpeg-turbo" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/libjpeg-turbo" name="platform-external-libjpeg-turbo" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/libmpeg2"/>
-  <project path="external/libmpeg2" name="external_libmpeg2" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/libmpeg2" name="platform-external-libmpeg2" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/libvpx"/>
-  <project path="external/libvpx" name="external_libvpx" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/libvpx" name="platform-external-libvpx" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/linux-kselftest"/>
-  <project path="external/linux-kselftest" name="external_linux-kselftest" revision="riscv64-android-12.0.0_dev" remote="arv" clone-depth="2"/>
+  <project path="external/linux-kselftest" name="platform-external-linux-kselftest" revision="riscv64-android-12.0.0_dev" remote="riscv-android" clone-depth="2"/>
   <remove-project name="platform/external/llvm"/>
-  <project path="external/llvm" name="external_llvm" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/llvm" name="platform-external-llvm" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/oboe"/>
-  <project path="external/oboe" name="external_oboe" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/oboe" name="platform-external-oboe" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/perfetto"/>
-  <project path="external/perfetto" name="external_perfetto" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/perfetto" name="platform-external-perfetto" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/pdfium"/>
-  <project path="external/pdfium" name="external_pdfium" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/pdfium" name="platform-external-pdfium" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/python/cpython2"/>
-  <project path="external/python/cpython2" name="external_python_cpython2" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/python/cpython2" name="platform-external-python-cpython2" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/rust/crates/libc"/>
-  <project path="external/rust/crates/libc" name="external_rust_crates_libc" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/rust/crates/libc" name="platform-external-rust-crates-libc" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/scudo"/>
-  <project path="external/scudo" name="external_scudo" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/scudo" name="platform-external-scudo" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/seccomp-tests"/>
-  <project path="external/seccomp-tests" name="external_seccomp-tests" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/seccomp-tests" name="platform-external-seccomp-tests" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/skia"/>
-  <project path="external/skia" name="external_skia" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/skia" name="platform-external-skia" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/strace"/>
-  <project path="external/strace" name="external_strace" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/strace" name="platform-external-strace" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/tremolo"/>
-  <project path="external/tremolo" name="external_tremolo" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/tremolo" name="platform-external-tremolo" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/vixl"/>
-  <project path="external/vixl" name="external_vixl" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/vixl" name="platform-external-vixl" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/external/webrtc"/>
-  <project path="external/webrtc" name="external_webrtc" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="external/webrtc" name="platform-external-webrtc" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
 
   <remove-project name="platform/frameworks/av"/>
-  <project path="frameworks/av" name="frameworks_av" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="frameworks/av" name="platform-frameworks-av" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/frameworks/base"/>
-  <project path="frameworks/base" name="frameworks_base" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="frameworks/base" name="platform-frameworks-base" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/frameworks/native"/>
-  <project path="frameworks/native" name="frameworks_native" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="frameworks/native" name="platform-frameworks-native" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/frameworks/proto_logging"/>
-  <project path="frameworks/proto_logging" name="frameworks_proto_logging" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="frameworks/proto_logging" name="platform-frameworks-proto_logging" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
 
   <remove-project name="platform/hardware/interfaces"/>
-  <project path="hardware/interfaces" name="hardware_interfaces" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="hardware/interfaces" name="platform-hardware-interfaces" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
 
   <remove-project name="platform/libcore"/>
-  <project path="libcore" name="libcore" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="libcore" name="platform-libcore" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
 
   <remove-project name="platform/platform_testing"/>
-  <project path="platform_testing" name="platform_testing" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="platform_testing" name="platform-platform_testing" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/packages/apps/Bluetooth"/>
-  <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="packages/apps/Bluetooth" name="platform-packages-apps-Bluetooth" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/packages/modules/common"/>
-  <project path="packages/modules/common" name="packages_modules_common" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="packages/modules/common" name="platform-packages-modules-common" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/packages/modules/DnsResolver"/>
-  <project path="packages/modules/DnsResolver" name="packages_modules_DnsResolver" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="packages/modules/DnsResolver" name="platform-packages-modules-DnsResolver" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/packages/modules/NeuralNetworks"/>
-  <project path="packages/modules/NeuralNetworks" name="packages_modules_NeuralNetworks" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="packages/modules/NeuralNetworks" name="platform-packages-modules-NeuralNetworks" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/packages/services/Car"/>
-  <project path="packages/services/Car" name="packages_services_Car" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="packages/services/Car" name="platform-packages-services-Car" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
 
   <remove-project name="platform/system/apex"/>
-  <project path="system/apex" name="system_apex" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="system/apex" name="platform-system-apex" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/system/bt"/>
-  <project path="system/bt" name="system_bt" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="system/bt" name="platform-system-bt" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/system/extras"/>
-  <project path="system/extras" name="system_extras" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="system/extras" name="platform-system-extras" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/system/iorap"/>
-  <project path="system/iorap" name="system_iorap" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="system/iorap" name="platform-system-iorap" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/system/libbase"/>
-  <project path="system/libbase" name="system_libbase" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="system/libbase" name="platform-system-libbase" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/system/memory/libmemunreachable"/>
-  <project path="system/memory/libmemunreachable" name="system_memory_libmemunreachable" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="system/memory/libmemunreachable" name="platform-system-memory-libmemunreachable" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/system/nvram"/>
-  <project path="system/nvram" name="system_nvram" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="system/nvram" name="platform-system-nvram" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/system/libhwbinder"/>
-  <project path="system/libhwbinder" name="system_libhwbinder" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="system/libhwbinder" name="platform-system-libhwbinder" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/system/logging"/>
-  <project path="system/logging" name="system_logging" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="system/logging" name="platform-system-logging" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/system/netd"/>
-  <project path="system/netd" name="system_netd" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="system/netd" name="platform-system-netd" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/system/unwinding"/>
-  <project path="system/unwinding" name="system_unwinding" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="system/unwinding" name="platform-system-unwinding" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
 
   <remove-project name="platform/test/mlts/benchmark"/>
-  <project path="test/mlts/benchmark" name="test_mlts_benchmark" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="test/mlts/benchmark" name="platform-test-mlts-benchmark" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/test/vts"/>
-  <project path="test/vts" name="test_vts" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="test/vts" name="platform-test-vts" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/test/vts-testcase/hal"/>
-  <project path="test/vts-testcase/hal" name="test_vts-testcase_hal" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="test/vts-testcase/hal" name="platform-test-vts-testcase-hal" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
   <remove-project name="platform/test/vts-testcase/vndk"/>
-  <project path="test/vts-testcase/vndk" name="test_vts-testcase_vndk" revision="riscv64-android-12.0.0_dev" remote="arv"/>
+  <project path="test/vts-testcase/vndk" name="platform-test-vts-testcase-vndk" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
 
 
   <!-- remove -->
@@ -146,8 +147,6 @@
 
 
   <!-- cts & prebuilts -->
-  <remote name="riscv-android" fetch="https://github.com/riscv-android-src"/>
-
   <remove-project name="platform/cts"/>
   <project path="cts" name="platform-cts" revision="riscv64-android-12.0.0_dev" remote="riscv-android"/>
 
