@@ -2,11 +2,19 @@
 <manifest>
   <remote name="arv" fetch="https://github.com/android-risc-v"/>
 
+  <remove-project name="platform/art"/>
+  <project path="art" name="art" revision="arv-14" remote="arv"/>
+  <remove-project name="platform/build/soong"/>  
+  <project path="build/soong" name="build_soong" revision="arv-14" remote="arv">
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
   <remove-project name="platform/external/mesa3d"/>
-  <project path="external/mesa3d" name="external_mesa3d" revision="arv-master" remote="arv"/>
+  <project path="external/mesa3d" name="external_mesa3d" revision="arv-14" remote="arv"/>
+  <remove-project name="platform/frameworks/base"/>
+  <project path="frameworks/base" name="frameworks_base" revision="arv-14" remote="arv"/>
 
-  <project path="hardware/arv" name="hardware_arv" revision="arv-master" remote="arv"/>
-  <project path="device/arv/jh7110" name="device_arv_jh7110" revision="arv-master" remote="arv"/>
-  
-  <project path="vendor/arpi/RpLauncher" name="RpLauncher" revision="arpi-master" remote="arv"/>
+  <project path="hardware/arv" name="hardware_arv" revision="arv-14" remote="arv"/>
+  <project path="device/arv/jh7110" name="device_arv_jh7110" revision="arv-14" remote="arv"/>
+  <project path="vendor/arpi/RpLauncher" name="RpLauncher" revision="arpi-14" remote="arv"/>
 </manifest>

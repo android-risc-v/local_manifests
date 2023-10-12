@@ -1,8 +1,8 @@
 # Download Android source with local_manifests
  Refer to http://source.android.com/source/downloading.html
 
- $ repo init -u https://android.googlesource.com/platform/manifest -b master
- $ git clone https://github.com/android-risc-v/local_manifests .repo/local_manifests -b arv-master
+ $ repo init -u https://android.googlesource.com/platform/manifest -b android-14.0.0_r1
+ $ git clone https://github.com/android-risc-v/local_manifests .repo/local_manifests -b arv-14
  $ repo sync
 
 # Build for JH7110
