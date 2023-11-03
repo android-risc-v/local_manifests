@@ -6,6 +6,6 @@
  $ repo sync
 
 # Build for JH7110
-  https://github.com/android-risc-v/device_arv_jh7110
+  https://github.com/android-risc-v/device_arv_jh7110/tree/arv-master
 
 Use -j[n] option on sync & build steps, if build host has a good number of CPU cores.
